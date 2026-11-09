@@ -1,7 +1,7 @@
 # F1 Aerodynamics Simulator: Engineering Report
 
-Author: YOUR NAME
-Date: DATE
+Author: John Varghese
+Date: 9/11/2026
 Version: 1.0
 
 ## Abstract
