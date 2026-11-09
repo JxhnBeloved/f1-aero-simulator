@@ -11,6 +11,7 @@ An interactive Python simulator that shows how an F1-style wing makes downforce 
 - **Performance dashboard:** downforce and drag in newtons, CL, CD, L/D, dynamic pressure, induced-drag share and the power drag absorbs, updating live as you move the sliders.
 - **Computed airflow:** a 2D Hess-Smith panel method solves potential flow around a NACA 4-digit airfoil section and draws the pressure-coefficient map, streamlines and surface Cp distribution. The wing is drawn inverted, as on an F1 car.
 - **Configuration comparison:** three wing setups side by side, with angle-of-attack sweeps (downforce, drag, efficiency) and airspeed sweeps.
+- **DRS open vs closed:** compares the wing with the rear-wing flap open and closed, using an illustrative flattening model (not calibrated to any real car).
 - **Method and limits tab:** states the models, validation and limitations inside the app.
 
 | Airflow (computed) | Configuration comparison |
@@ -85,7 +86,7 @@ The high-downforce setup makes about 2.5 times the downforce of the low-drag set
 
 ## Verification
 
-- 50 automated tests (`pytest`), including invariants checked across 450 wing and flow configurations.
+- 59 automated tests (`pytest`), including invariants checked across 450 wing and flow configurations.
 - 25 validation checks with an expected-vs-observed report: [docs/validation_report.md](docs/validation_report.md).
 - The panel method reproduces the exact cylinder pressure distribution (max error 0.004), satisfies the Kutta condition, gives near-zero drag for a closed body, and converges as panels are added (0.5 % change from 120 to 240 panels).
 
@@ -121,7 +122,7 @@ f1-aero-simulator/
 - Multi-element rear wing (main plane + flap with slot)
 - Ground effect and ride-height sensitivity
 - Front wing vs rear wing comparison
-- DRS open vs closed
+- DRS open vs closed (done)
 - Sensitivity analysis of the most influential parameters
 - Optional OpenFOAM case for comparison with a real RANS solution
 
