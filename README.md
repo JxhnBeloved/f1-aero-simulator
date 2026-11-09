@@ -24,7 +24,7 @@ Requires Python 3.10 or newer.
 **Windows (PowerShell)**
 
 ```powershell
-git clone https://github.com/YOUR-USERNAME/f1-aero-simulator.git
+git clone https://github.com/JxhnBeloved/f1-aero-simulator.git
 cd f1-aero-simulator
 python -m venv .venv
 .venv\Scripts\Activate.ps1
@@ -35,7 +35,7 @@ streamlit run app.py
 **macOS / Linux**
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/f1-aero-simulator.git
+git clone https://github.com/JxhnBeloved/f1-aero-simulator.git
 cd f1-aero-simulator
 python3 -m venv .venv
 source .venv/bin/activate
