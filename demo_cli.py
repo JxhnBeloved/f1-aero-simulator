@@ -1,7 +1,7 @@
 """
-demo_stage4.py
+demo_cli.py
 Quick command-line demo of the Stage 4 calculation engine.
-Run:  python demo_stage4.py
+Run:  python demo_cli.py
 """
 from aero.forces import FlowCondition, compute_performance
 from aero.wing import WingConfig
