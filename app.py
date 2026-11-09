@@ -17,6 +17,7 @@ from aero.sweeps import sweep_aoa
 from aero.wing import WingConfig
 from viz.flow_field import plot_cp_distribution, plot_flow_field
 from viz.plots import plot_aoa_sweep
+from ui.comparison_tab import render_comparison_tab
 
 st.set_page_config(page_title="F1 Aero Simulator", layout="wide")
 
@@ -63,7 +64,9 @@ wing = WingConfig(
 flow = FlowCondition(velocity_ms=speed_kmh / MS_TO_KMH, air_density=air_density)
 result = compute_performance(wing, flow)
 
-tab_dashboard, tab_airflow = st.tabs(["Performance dashboard", "Airflow (computed)"])
+tab_dashboard, tab_airflow, tab_compare = st.tabs(
+    ["Performance dashboard", "Airflow (computed)", "Configuration comparison"]
+)
 
 # --------------------------------------------------------------- dashboard
 with tab_dashboard:
@@ -144,3 +147,6 @@ with tab_airflow:
     show_streamlines = st.checkbox("Show streamlines", value=True)
     st.pyplot(plot_flow_field(panel, show_streamlines=show_streamlines))
     st.pyplot(plot_cp_distribution(panel))
+
+with tab_compare:
+    render_comparison_tab(flow)
